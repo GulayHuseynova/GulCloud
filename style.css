@@ -1,0 +1,135 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif; /* Daha modern şrift */
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* Arxa plana dəbli bir butik şəkli əlavə edirik */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .login-card {
+        background: rgba(255, 255, 255, 0.15); /* Şüşə effekti */
+        padding: 50px 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(15px); /* Arxa fonu bulandıran effekt */
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        width: 400px;
+        text-align: center;
+        color: white;
+    }
+
+    .brand-logo {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    p.subtitle {
+        margin-bottom: 30px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+        position: relative;
+        text-align: left;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 15px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 30px; /* Yumru dizayn */
+        outline: none;
+        color: white;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    input:focus {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: #fff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: #fff;
+        color: #333;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.4s ease;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        background: #f8f8f8;
+        transform: scale(1.03); /* Kiçik böyümə effekti */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    #message {
+        margin-top: 25px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    /* Kiçik bir interaktivlik: Yazıların üzərinə gələndə parlaqlıq */
+    .brand-logo:hover {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        cursor: default;
+    } 
+    /* Planşetlər və böyük telefonlar üçün */
+    @media (max-width: 768px) {
+        .login-card {
+            padding: 40px 30px;
+        }
+    }
+
+    /* Kiçik telefonlar üçün (Məsələn: iPhone SE) */
+    @media (max-width: 480px) {
+        .login-card {
+            padding: 30px 20px;
+        }
+        
+        .brand-logo {
+            font-size: 26px;
+        }
+        
+        input {
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+        
+        button {
+            padding: 12px;
+            font-size: 14px;
+        }
+    }
